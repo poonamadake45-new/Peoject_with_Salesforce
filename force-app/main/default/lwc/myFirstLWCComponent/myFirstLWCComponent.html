@@ -1,0 +1,23 @@
+<template>
+<lightning-button label='Submit' varient='brand' onclick={openModelPopup}></lightning-button> <!-- Create button -->
+<!-- OpenModelPopup : MethodName , Need to declare in js, ye variable ko true karega-->
+<!-- 1st code to show button-->
+<!--    <template if:true={isModelPopupOpne}> Comment  isModelPopupOpne declare variabble
+        <lightning-button label='Next' varient='brand'></lightning-button>
+    </template>   -->
+<!-- 2nd code to show save button below -->
+ <template if:true={isModelPopupOpne}>
+    <lightning-record-edit-form
+    object-api-name={objectApiName}
+    record-id={recordId}
+>
+    <lightning-input-field field-name={nameField}> </lightning-input-field>
+    <div class="slds-var-m-top_medium">
+        <lightning-button variant="brand" type="submit" label="Save">
+        </lightning-button>
+    </div>
+</lightning-record-edit-form>
+    </template>   
+
+
+</template>

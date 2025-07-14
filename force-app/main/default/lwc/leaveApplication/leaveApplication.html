@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title='Create a new record'>  
+        <div class="slds-m-around-medium">
+            <lightning-input label='Name' onchange={handleChangeName} class="slds-m-bottom_x-small"></lightning-input>
+            <lightning-input label='Project Name' onchange={handleProjectName} class="slds-m-bottom_x-small"></lightning-input>
+            <lightning-button variant="brand"  label="Save" onclick={handleSave}></lightning-button >
+        </div>   
+    </lightning-card>
+</template>
